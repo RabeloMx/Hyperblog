@@ -1,0 +1,259 @@
+[33mcommit 656210a8d03b4cfc4a837968efb9a86d8800d191[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Juan Pablo <juanpabloro18@gmail.com>
+Date:   Wed Nov 6 21:48:35 2024 -0600
+
+    proyecto calculadora y proyecto contador de likes
+
+[1mdiff --git a/Contador/Index.html b/Contador/Index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d143ec5[m
+[1m--- /dev/null[m
+[1m+++ b/Contador/Index.html[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <title>Contador</title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <h1>Contador de likes</h1>[m
+[32m+[m
+[32m+[m[32m    <!-- Valor del contador -->[m
+[32m+[m[32m     <h2 id="contador">0</h2>[m
+[32m+[m
+[32m+[m[32m     <!-- Botones para aumentar o diminuir -->[m
+[32m+[m[32m      <button onclick="aumentar()">Aumentar</button>[m
+[32m+[m[32m      <button onclick="disminuir()">Disminuir</button>[m
+[32m+[m
+[32m+[m[32m      <!-- archicvo javascript -->[m
+[32m+[m[32m       <script src="script.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/Contador/script.js b/Contador/script.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fd7432a[m
+[1m--- /dev/null[m
+[1m+++ b/Contador/script.js[m
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32m// Inicializar el valor del contador en 0[m
+[32m+[m
+[32m+[m[32mlet contador = 0;[m
+[32m+[m
+[32m+[m[32m// Función para aumentar el contador[m
+[32m+[m
+[32m+[m[32mfunction aumentar() {[m
+[32m+[m[32m    contador++;[m
+[32m+[m[32m    actualizarContador();[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// Función para disminuir el contador[m
+[32m+[m
+[32m+[m[32mfunction disminuir() {[m
+[32m+[m[32m    contador--;[m
+[32m+[m[32m    actualizarContador();[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// Función para actualizar el valor mostrado del contador[m
+[32m+[m
+[32m+[m[32mfunction actualizarContador() {[m
+[32m+[m[32m    document.getElementById("contador").innerText = contador;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/Contador/styles.css b/Contador/styles.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a5e569b[m
+[1m--- /dev/null[m
+[1m+++ b/Contador/styles.css[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32mbody{[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;[m
+[32m+[m[32m    background-color: #f4f4f9;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#contador{[m
+[32m+[m[32m    font-size: 48px;[m
+[32m+[m[32m    color: #333;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbutton{[m
+[32m+[m[32m    font-size: 20px;[m
+[32m+[m[32m    padding: 10px 20px;[m
+[32m+[m[32m    margin: 10px;[m
+[32m+[m[32m    cursor: pointer;[m
+[32m+[m[32m    background-color: #4caf50;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    border: none;[m
+[32m+[m[32m    border-radius: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbutton:hover{[m
+[32m+[m[32m    background-color: #45a049;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/calculadora.html b/calculadora.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b2ef474[m
+[1m--- /dev/null[m
+[1m+++ b/calculadora.html[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <title>Calculadora</title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <h1>Mi calculadora</h1>[m
+[32m+[m
+[32m+[m[32m    <section class="input-datos">[m
+[32m+[m[32m    <!-- Campos de entrada -->[m
+[32m+[m[32m    <input type="number" id="numero1" placeholder="primer número">[m
+[32m+[m[32m    <input type="number" id="numero2" placeholder="segundo número">[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m[32m    <section class="botones">[m
+[32m+[m[32m    <!-- botones de operaciones -->[m
+[32m+[m[32m    <button onclick="sumar()">Sumar</button>[m
+[32m+[m[32m    <button onclick="restar()">Restar</button>[m
+[32m+[m[32m    <button onclick="multiplicar()">Multiplicar</button>[m
+[32m+[m[32m    <button onclick="dividir()">Dividir</button>[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m[32m     <!-- Espacio para el resultado -->[m
+[32m+[m[32m    <h2>Resultado: <span id="resultado">0</span></h2>[m
+[32m+[m
+[32m+[m[32m    <!-- Historial de operaciones -->[m
+[32m+[m[32m     <h3>Historial de operaciones</h3>[m
+[32m+[m[32m    <div id="historial"></div>[m
+[32m+[m
+[32m+[m[32m    <!-- JavaScript enlace -->[m
+[32m+[m[32m    <script src="script.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/historia.txt b/historia.txt[m
+[1mdeleted file mode 100644[m
+[1mindex 97614e9..0000000[m
+[1m--- a/historia.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,5 +0,0 @@[m
+[31m-Esta es la historia de Juan Pablo[m
+[31m-[m
+[31m-Juan Pablo tiene 26 años y nacio en México[m
+[31m-[m
+[31m-Hoy conoceras más sobre su historia...[m
+\ No newline at end of file[m
+[1mdiff --git a/script.js b/script.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f3bf042[m
+[1m--- /dev/null[m
+[1m+++ b/script.js[m
+[36m@@ -0,0 +1,53 @@[m
+[32m+[m[32m// Función para actualizar el historial[m
+[32m+[m[32mfunction acutalizarHistorial(operacion, numero1, numero2, resultado) {[m
+[32m+[m[32m    const historialDiv = document.getElementById("historial");[m
+[32m+[m[32m    const nuevoRegistro = document.createElement("p");[m
+[32m+[m[32m    nuevoRegistro.innerText = `${numero1} ${operacion} ${numero2} = ${resultado}`;[m
+[32m+[m[32m    historialDiv.appendChild(nuevoRegistro)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// Función para sumar[m
+[32m+[m[32mfunction sumar() {[m
+[32m+[m[32m    const numero1 = parseFloat(document.getElementById("numero1").value);[m
+[32m+[m[32m    const numero2 = parseFloat(document.getElementById("numero2").value);[m
+[32m+[m[32m    const resultado = numero1 + numero2;[m
+[32m+[m[32m    document.getElementById("resultado").innerText = resultado[m
+[32m+[m[32m    acutalizarHistorial('+', numero1, numero2, resultado)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// Función para restar[m
+[32m+[m[32mfunction restar() {[m
+[32m+[m[32m    const numero1 = parseFloat(document.getElementById("numero1").value);[m
+[32m+[m[32m    const numero2 = parseFloat(document.getElementById("numero2").value);[m
+[32m+[m[32m    const resultado = numero1 - numero2;[m
+[32m+[m[32m    document.getElementById("resultado").innerText = resultado[m
+[32m+[m[32m    acutalizarHistorial('-', numero1, numero2, resultado)[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m// Función para multiplicar[m
+[32m+[m[32mfunction multiplicar() {[m
+[32m+[m[32m    const numero1 = parseFloat(document.getElementById("numero1").value);[m
+[32m+[m[32m    const numero2 = parseFloat(document.getElementById("numero2").value);[m
+[32m+[m[32m    const resultado = numero1 * numero2;[m
+[32m+[m[32m    document.getElementById("resultado").innerText = resultado[m
+[32m+[m[32m    acutalizarHistorial('*', numero1, numero2, resultado)[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// Función para dividir[m
+[32m+[m[32mfunction dividir() {[m
+[32m+[m[32m    const numero1 = parseFloat(document.getElementById("numero1").value);[m
+[32m+[m[32m    const numero2 = parseFloat(document.getElementById("numero2").value);[m
+[32m+[m
+[32m+[m[32m    // Evitar división por cero[m
+[32m+[m[32m    if (numero2 === 0) {[m
+[32m+[m[32m        alert("No se puede dividir entre cero")[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    const resultado = numero1 / numero2;[m
+[32m+[m[32m    document.getElementById("resultado").innerText = resultado[m
+[32m+[m[32m    acutalizarHistorial('/', numero1, numero2, resultado)[m
+[32m+[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/styles.css b/styles.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f873536[m
+[1m--- /dev/null[m
+[1m+++ b/styles.css[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32mbody{[m
+[32m+[m[32m    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    background-color: f0f0f0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.input-datos{[m
+[32m+[m[32m    margin: 50px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.input-datos input{[m
+[32m+[m[32m    border-radius: 12px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32minput {[m
+[32m+[m[32m    margin: 10px;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    font-size: 16px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbutton{[m
+[32m+[m[32m    margin: 5px;[m
+[32m+[m[32m    padding: 10px 20px;[m
+[32m+[m[32m    font-size: 16px;[m
+[32m+[m[32m    border-radius: 10px;[m
+[32m+[m[32m    background-color: #4CAF50;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    border: none;[m
+[32m+[m[32m    cursor: pointer;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mbutton:hover{[m
+[32m+[m[32m    background-color: #45a049;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mh2{[m
+[32m+[m[32m    color: #333;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m

@@ -1,0 +1,41 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+h1{
+    font-size: 45px;
+    color: #456879;
+}
+
+input{
+    height: 25px;
+    width: 250px;
+    margin: 25px;
+    border-radius: 12px;
+}
+
+.botones{
+    margin: 10px;
+    padding: 10px;
+}
+
+button{
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #024a86;
+    color: wheat;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #024a60;
+}
+
+h2{
+    color: #456879;
+}
