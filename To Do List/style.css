@@ -1,0 +1,62 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #F2EBD5;
+    color: #5D732D;
+}
+
+.input-area{
+    margin-bottom: 20px;
+}
+
+input [type="text"]{
+    font-size: 16px;
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    font-size: 16px;
+    margin: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #A67233;
+    color: #F2EBD5;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #A3A64B;
+}
+
+#listaTareas {
+    list-style-type: none;
+    padding: 0;
+}
+
+#listasTareas li{
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#listaTareas li span{
+    margin: 0 10px;
+}
+
+#listaTareas li button {
+    margin-left: 10px;
+    background-color: #A67233;
+}
+
+#listaTareas li button:hover {
+    background-color: #A3A64B;
+}
+
+.completada span{
+    text-align: line-through;
+    color: #A67233;
+}

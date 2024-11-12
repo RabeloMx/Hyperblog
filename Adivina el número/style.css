@@ -1,0 +1,40 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #BF9B93;
+}
+
+h1{
+    font-size: 48px;
+    color: #060B0D;
+}
+
+p{
+    font-size: 18px;
+    color: #062026;
+}
+
+input{
+    margin: 10px;
+    padding: 8px;
+    width: 150px;
+}
+
+button{
+   font-size: 18px;
+   padding: 10px 20px;
+   cursor: pointer;
+   background-color: #0D6973;
+   color: white;
+   border: none;
+   border-radius: 8px; 
+}
+
+button:hover{
+    background-color: #062026;
+}
+
+#mensaje{
+    font-size: 20px;
+    margin-top: 20px;
+}

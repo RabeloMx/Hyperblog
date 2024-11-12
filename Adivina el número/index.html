@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Juego de Adivinar el Número</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+  <h1>Juego de Adivinar el Número</h1>
+
+  <p>He pensado en un número entre 1 y 100. ¡Intenta adivinarlo!</p>
+
+  <!-- Entrada para el número del usuario -->
+  <input type="number" id="inputNumero" placeholder="Ingrear Número" min="1" max="100">
+
+  <!-- Botón para enviar el intento -->
+  <button onclick="adivinarNumero()">Adivinar</button>
+
+  <!-- Área para mostrar mensajes de retroalimentación -->
+  <p id="mensaje"></p>
+
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
