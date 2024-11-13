@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: fantasy;
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+#reloj {
+    font-size: 60px;
+    font-weight: bold;
+    border: 2px solid #61dafb;
+    padding: 20px;
+    border-radius: 10px;
+}
