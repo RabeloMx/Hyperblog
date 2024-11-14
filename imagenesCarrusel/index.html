@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Galeria de imágenes</title>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="image-container">
+            <img id="gallery-image" src="" alt="Imagen de galeria">
+        </div>
+        <div class="controls">
+            <button onclick="prevImage()">Anterior</button>
+            <button onclick="nextImage()">Siguiente</button>
+        </div>
+        <div class="filter-controls">
+            <button onclick="applyFilter('none')">Normal</button>
+            <button onclick="applyFilter('grayscale(100%)')">Escala de grises</button>
+            <button onclick="applyFilter('brightness(150%)')">Brillo</button>
+            <button onclick="applyFilter('sepia(100%)')">Sepia</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
